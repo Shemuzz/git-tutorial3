@@ -1,0 +1,1235 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\ELITEBOOK> cd C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git init
+Initialized empty Git repository in C:/Users/ELITEBOOK/OneDrive/Desktop/git-tutorial-3/.git/
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Version 1"
+[master (root-commit) 63c0da3] Version 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Version 2"
+[master cd89eb4] Version 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Version 3"
+[master 4557971] Version 3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596 (HEAD -> master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch feature1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596 (HEAD -> master, feature1)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature1
+Switched to branch 'feature1'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596 (HEAD -> feature1, master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "feature commit 1"
+[feature1 36a5bd5] feature commit 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 36a5bd599a3219eb6d9236ab369713358afc9d7f (HEAD -> feature1)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:47:14 2026 +0300
+|
+|     feature commit 1
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596 (master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "feature commit 2"
+[feature1 2363c1b] feature commit 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b (HEAD -> feature1)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:48:08 2026 +0300
+|
+|     feature commit 2
+|
+* commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:47:14 2026 +0300
+|
+|     feature commit 1
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596 (master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git --all --graph
+unknown option: --all
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b (feature1)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:48:08 2026 +0300
+|
+|     feature commit 2
+|
+* commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:47:14 2026 +0300
+|
+|     feature commit 1
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596 (HEAD -> master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Bug fix"
+[master 95dcad5] Bug fix
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bugfix
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 95dcad564a06d282de9a81c226ee3fe22360934f (HEAD -> master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:51:43 2026 +0300
+|
+|     Bug fix
+|
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+| |
+| |     feature commit 2
+| |
+| * commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 20:47:14 2026 +0300
+|
+|       feature commit 1
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature1
+Switched to branch 'feature1'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 95dcad564a06d282de9a81c226ee3fe22360934f (master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:51:43 2026 +0300
+|
+|     Bug fix
+|
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b (HEAD -> feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+| |
+| |     feature commit 2
+| |
+| * commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 20:47:14 2026 +0300
+|
+|       feature commit 1
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+
+      Version 1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "feature done"
+[feature1 b000e07] feature done
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (HEAD -> feature1)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 21:59:18 2026 +0300
+|
+|     feature done
+|
+* commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:48:08 2026 +0300
+|
+|     feature commit 2
+|
+* commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:47:14 2026 +0300
+|
+|     feature commit 1
+|
+| * commit 95dcad564a06d282de9a81c226ee3fe22360934f (master)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 20:51:43 2026 +0300
+|
+|       Bug fix
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 21:59:18 2026 +0300
+|
+|     feature done
+|
+* commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:48:08 2026 +0300
+|
+|     feature commit 2
+|
+* commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:47:14 2026 +0300
+|
+|     feature commit 1
+|
+| * commit 95dcad564a06d282de9a81c226ee3fe22360934f (HEAD -> master)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 20:51:43 2026 +0300
+|
+|       Bug fix
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:00 2026 +0300
+|
+|     Version 2
+|
+* commit 63c0da3ef4ba65bef568ef45f37514edcab05fee
+  Author: Mongare Shem <mongareshem1@gmail.com>
+  Date:   Wed Apr 1 20:34:05 2026 +0300
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git merge feature1 -m "Merge feature1"
+Merge made by the 'ort' strategy.
+ feature | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4 (HEAD -> master)
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+| |
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+| |
+| |     feature commit 2
+| |
+| * commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:47:14 2026 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 95dcad564a06d282de9a81c226ee3fe22360934f
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 20:51:43 2026 +0300
+|
+|       Bug fix
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch conflict
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4 (HEAD -> master, conflict)
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+| |
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+| |
+| |     feature commit 2
+| |
+| * commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:47:14 2026 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 95dcad564a06d282de9a81c226ee3fe22360934f
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 20:51:43 2026 +0300
+|
+|       Bug fix
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 20:35:22 2026 +0300
+|
+|     Version 3
+|
+* commit cd89eb438167c8b1a340a266a526cee2ed867f70
+| Author: Mongare Shem <mongareshem1@gmail.com>
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout conflict
+Switched to branch 'conflict'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Conflict 1"
+[conflict 93de9b7] Conflict 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (HEAD -> conflict)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 23:51:23 2026 +0300
+|
+|     Conflict 1
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4 (master)
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+| |
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+| |
+| |     feature commit 2
+| |
+| * commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:47:14 2026 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 95dcad564a06d282de9a81c226ee3fe22360934f
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 20:51:43 2026 +0300
+|
+|       Bug fix
+|
+* commit 4557971ea83d7bbd09945374fd0b3f26801a3596
+| Author: Mongare Shem <mongareshem1@gmail.com>
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Conflict 2"
+[master c472b90] Conflict 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit c472b9015fbc61e9d8723fd032f1aa55125df2fe (HEAD -> master)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|     Conflict 2
+|
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:51:23 2026 +0300
+|
+|       Conflict 1
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+| |
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+| |
+| |     feature commit 2
+| |
+| * commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:47:14 2026 +0300
+| |
+| |     feature commit 1
+| |
+* | commit 95dcad564a06d282de9a81c226ee3fe22360934f
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git merge conflict -m "Merge conflict,"
+Auto-merging feature
+CONFLICT (content): Merge conflict in feature
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Merge conflict resolved"
+[master d14e2c2] Merge conflict resolved
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135 (HEAD -> master)
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+| |
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+| |
+| |     feature commit 2
+| |
+| * commit 36a5bd599a3219eb6d9236ab369713358afc9d7f
+:
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135 (HEAD -> master)
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+| |
+| * commit 2363c1b54506b19bf9c2ba31c8aef0e94098e86b
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 20:48:08 2026 +0300
+:
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135 (HEAD -> master)
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch new-feature
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135 (HEAD -> master, new-feature)
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout new-feature
+Switched to branch 'new-feature'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135 (HEAD -> new-feature, master)
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+|\  Merge: 95dcad5 b000e07
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 22:04:46 2026 +0300
+| |
+| |     Merge feature1
+| |
+| * commit b000e074e1e51b6fe15316f67cfad1b0d8758f1a (feature1)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 21:59:18 2026 +0300
+| |
+| |     feature done
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "New Feature"
+[new-feature 7fdf7f2] New Feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new-feature
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git remote add origin https://github.com/Shemuzz/git-tutorial3.git
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (32/32), 2.63 KiB | 158.00 KiB/s, done.
+Total 32 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Shemuzz/git-tutorial3.git
+ * [new branch]      master -> master
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout new-feature
+Switched to branch 'new-feature'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git push origin new-feature
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 94.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'new-feature' on GitHub by visiting:
+remote:      https://github.com/Shemuzz/git-tutorial3/pull/new/new-feature
+remote:
+To https://github.com/Shemuzz/git-tutorial3.git
+ * [new branch]      new-feature -> new-feature
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 886 bytes | 110.00 KiB/s, done.
+From https://github.com/Shemuzz/git-tutorial3
+   d14e2c2..aa58f00  master     -> origin/master
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit aa58f0073b75eaec5d6a684f19a3de692477ada7 (origin/master)
+|\  Merge: d14e2c2 7fdf7f2
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 11:55:43 2026 +0300
+| |
+| |     Merge pull request #1 from Shemuzz/new-feature
+| |
+| |     New Feature
+| |
+| * commit 7fdf7f22f885f89eb3f9bce2958855979f7f9104 (HEAD -> new-feature, origin/new-feature)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 11:42:33 2026 +0300
+|
+|       New Feature
+|
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135 (master)
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+:...skipping...
+*   commit aa58f0073b75eaec5d6a684f19a3de692477ada7 (origin/master)
+|\  Merge: d14e2c2 7fdf7f2
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 11:55:43 2026 +0300
+| |
+| |     Merge pull request #1 from Shemuzz/new-feature
+| |
+| |     New Feature
+| |
+| * commit 7fdf7f22f885f89eb3f9bce2958855979f7f9104 (HEAD -> new-feature, origin/new-feature)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 11:42:33 2026 +0300
+|
+|       New Feature
+|
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135 (master)
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git pull origin master
+From https://github.com/Shemuzz/git-tutorial3
+ * branch            master     -> FETCH_HEAD
+Updating d14e2c2..aa58f00
+Fast-forward
+ new-feature | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new-feature
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit aa58f0073b75eaec5d6a684f19a3de692477ada7 (HEAD -> master, origin/master)
+|\  Merge: d14e2c2 7fdf7f2
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 11:55:43 2026 +0300
+| |
+| |     Merge pull request #1 from Shemuzz/new-feature
+| |
+| |     New Feature
+| |
+| * commit 7fdf7f22f885f89eb3f9bce2958855979f7f9104 (origin/new-feature, new-feature)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 11:42:33 2026 +0300
+|
+|       New Feature
+|
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch feature1
+fatal: a branch named 'feature1' already exists
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch -D feature1
+Deleted branch feature1 (was b000e07).
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch feature1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit aa58f0073b75eaec5d6a684f19a3de692477ada7 (HEAD -> master, origin/master, feature1)
+|\  Merge: d14e2c2 7fdf7f2
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 11:55:43 2026 +0300
+| |
+| |     Merge pull request #1 from Shemuzz/new-feature
+| |
+| |     New Feature
+| |
+| * commit 7fdf7f22f885f89eb3f9bce2958855979f7f9104 (origin/new-feature, new-feature)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 11:42:33 2026 +0300
+|
+|       New Feature
+|
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Wed Apr 1 23:52:56 2026 +0300
+|
+|       Conflict 2
+|
+*   commit 0b9cc7f5627321c04ebf396b9a4a77c0e83d59e4
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3>
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature1
+M       feature
+Switched to branch 'feature1'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "feature1"
+[feature1 1ae855e] feature1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 1ae855e430b2d4d8d8b1a05aa3733b5caf8a0fee (HEAD -> feature1)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Fri Apr 3 13:49:01 2026 +0300
+|
+|     feature1
+|
+*   commit aa58f0073b75eaec5d6a684f19a3de692477ada7 (origin/master, master)
+|\  Merge: d14e2c2 7fdf7f2
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 11:55:43 2026 +0300
+| |
+| |     Merge pull request #1 from Shemuzz/new-feature
+| |
+| |     New Feature
+| |
+| * commit 7fdf7f22f885f89eb3f9bce2958855979f7f9104 (origin/new-feature, new-feature)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 11:42:33 2026 +0300
+|
+|       New Feature
+|
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:51:23 2026 +0300
+| |
+| |     Conflict 1
+| |
+* | commit c472b9015fbc61e9d8723fd032f1aa55125df2fe
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch feature2
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature2
+Switched to branch 'feature2'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "feature2"
+[feature2 923d73a] feature2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit 923d73a36a99b8d8f509171868466807e27067ae (HEAD -> feature2)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Fri Apr 3 13:51:15 2026 +0300
+|
+|     feature2
+|
+| * commit 1ae855e430b2d4d8d8b1a05aa3733b5caf8a0fee (feature1)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 13:49:01 2026 +0300
+|
+|       feature1
+|
+*   commit aa58f0073b75eaec5d6a684f19a3de692477ada7 (origin/master, master)
+|\  Merge: d14e2c2 7fdf7f2
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 11:55:43 2026 +0300
+| |
+| |     Merge pull request #1 from Shemuzz/new-feature
+| |
+| |     New Feature
+| |
+| * commit 7fdf7f22f885f89eb3f9bce2958855979f7f9104 (origin/new-feature, new-feature)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 11:42:33 2026 +0300
+|
+|       New Feature
+|
+*   commit d14e2c2161e0d0ea0e530b3251d4489cdbd57135
+|\  Merge: c472b90 93de9b7
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Wed Apr 1 23:58:12 2026 +0300
+| |
+| |     Merge conflict resolved
+| |
+| * commit 93de9b77fcb7fb776ea9b7dd34d2ad467c865ca4 (conflict)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git push origin feature2
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 339 bytes | 84.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature2' on GitHub by visiting:
+remote:      https://github.com/Shemuzz/git-tutorial3/pull/new/feature2
+remote:
+To https://github.com/Shemuzz/git-tutorial3.git
+ * [new branch]      feature2 -> feature2
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature1
+Switched to branch 'feature1'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git push origin feature1
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 339 bytes | 113.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature1' on GitHub by visiting:
+remote:      https://github.com/Shemuzz/git-tutorial3/pull/new/feature1
+remote:
+To https://github.com/Shemuzz/git-tutorial3.git
+ * [new branch]      feature1 -> feature1
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git pull origin master
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 2.70 KiB | 56.00 KiB/s, done.
+From https://github.com/Shemuzz/git-tutorial3
+ * branch            master     -> FETCH_HEAD
+   aa58f00..2229b14  master     -> origin/master
+Updating aa58f00..2229b14
+Fast-forward
+ feature | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit 2229b14e7cd612949277c595bc1f527fef517f84 (HEAD -> master, origin/master)
+|\  Merge: 973f0ff 5f13378
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 14:00:35 2026 +0300
+| |
+| |     Merge pull request #3 from Shemuzz/feature2
+| |
+| |     feature2
+| |
+| *   commit 5f133784cccf4b9772ae5fdf96b111066de63a00
+| |\  Merge: 923d73a 973f0ff
+| |/  Author: Shemuzz <mongareshem1@gmail.com>
+|/|   Date:   Fri Apr 3 14:00:19 2026 +0300
+| |
+| |       Merge branch 'master' into feature2
+| |
+* |   commit 973f0ff80dd455cbcbc1ebb6b2353a15de2a0806
+|\ \  Merge: aa58f00 1ae855e
+| | | Author: Shemuzz <mongareshem1@gmail.com>
+| | | Date:   Fri Apr 3 13:57:09 2026 +0300
+| | |
+| | |     Merge pull request #2 from Shemuzz/feature1
+| | |
+| | |     feature1
+| | |
+| * | commit 1ae855e430b2d4d8d8b1a05aa3733b5caf8a0fee (origin/feature1, feature1)
+|/ /  Author: Mongare Shem <mongareshem1@gmail.com>
+| |   Date:   Fri Apr 3 13:49:01 2026 +0300
+| |
+| |       feature1
+| |
+| * commit 923d73a36a99b8d8f509171868466807e27067ae (origin/feature2, feature2)
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Fri Apr 3 13:51:15 2026 +0300
+|
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch feature3
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature3
+Switched to branch 'feature3'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Feature 3"
+[feature3 ba503a0] Feature 3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+* commit ba503a034f67b71f08384873ff69c321b7a0fe8f (HEAD -> feature3)
+| Author: Mongare Shem <mongareshem1@gmail.com>
+| Date:   Sat Apr 4 12:06:28 2026 +0300
+|
+|     Feature 3
+|
+*   commit 2229b14e7cd612949277c595bc1f527fef517f84 (origin/master, master)
+|\  Merge: 973f0ff 5f13378
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 14:00:35 2026 +0300
+| |
+| |     Merge pull request #3 from Shemuzz/feature2
+| |
+| |     feature2
+| |
+| *   commit 5f133784cccf4b9772ae5fdf96b111066de63a00
+| |\  Merge: 923d73a 973f0ff
+| |/  Author: Shemuzz <mongareshem1@gmail.com>
+|/|   Date:   Fri Apr 3 14:00:19 2026 +0300
+| |
+| |       Merge branch 'master' into feature2
+| |
+* |   commit 973f0ff80dd455cbcbc1ebb6b2353a15de2a0806
+|\ \  Merge: aa58f00 1ae855e
+| | | Author: Shemuzz <mongareshem1@gmail.com>
+| | | Date:   Fri Apr 3 13:57:09 2026 +0300
+| | |
+| | |     Merge pull request #2 from Shemuzz/feature1
+| | |
+| | |     feature1
+| | |
+| * | commit 1ae855e430b2d4d8d8b1a05aa3733b5caf8a0fee (origin/feature1, feature1)
+|/ /  Author: Mongare Shem <mongareshem1@gmail.com>
+| |   Date:   Fri Apr 3 13:49:01 2026 +0300
+| |
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git branch feature4
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature4
+Switched to branch 'feature4'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "Feature 4"
+[feature4 c78853c] Feature 4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git push origin feature4
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature4' on GitHub by visiting:
+remote:      https://github.com/Shemuzz/git-tutorial3/pull/new/feature4
+remote:
+To https://github.com/Shemuzz/git-tutorial3.git
+ * [new branch]      feature4 -> feature4
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature3
+Switched to branch 'feature3'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git push origin feature3
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature3' on GitHub by visiting:
+remote:      https://github.com/Shemuzz/git-tutorial3/pull/new/feature3
+remote:
+To https://github.com/Shemuzz/git-tutorial3.git
+ * [new branch]      feature3 -> feature3
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout master
+Switched to branch 'master'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git pull origin master
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 885 bytes | 110.00 KiB/s, done.
+From https://github.com/Shemuzz/git-tutorial3
+ * branch            master     -> FETCH_HEAD
+   2229b14..ec3e6ca  master     -> origin/master
+Updating 2229b14..ec3e6ca
+Fast-forward
+ feature | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git checkout feature4
+Switched to branch 'feature4'
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git merge master
+Auto-merging feature
+CONFLICT (content): Merge conflict in feature
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git add .
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git commit -m "conflict resolved"
+[feature4 136aadf] conflict resolved
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git push origin feature4
+info: please complete authentication in your browser...
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 218 bytes | 218.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Shemuzz/git-tutorial3.git
+   c78853c..136aadf  feature4 -> feature4
+PS C:\Users\ELITEBOOK\OneDrive\Desktop\git-tutorial-3> git log --all --graph
+*   commit 136aadf5345e683985569efb450525c10802d1b4 (HEAD -> feature4, origin/feature4)
+|\  Merge: c78853c ec3e6ca
+| | Author: Mongare Shem <mongareshem1@gmail.com>
+| | Date:   Sat Apr 4 12:31:30 2026 +0300
+| |
+| |     conflict resolved
+| |
+| *   commit ec3e6ca8f46f17fb420ac761d0ee5acc7c090812 (origin/master, master)
+| |\  Merge: 2229b14 ba503a0
+| | | Author: Shemuzz <mongareshem1@gmail.com>
+| | | Date:   Sat Apr 4 12:15:51 2026 +0300
+| | |
+| | |     Merge pull request #4 from Shemuzz/feature3
+| | |
+| | |     Feature 3
+| | |
+| | * commit ba503a034f67b71f08384873ff69c321b7a0fe8f (origin/feature3, feature3)
+| |/  Author: Mongare Shem <mongareshem1@gmail.com>
+| |   Date:   Sat Apr 4 12:06:28 2026 +0300
+| |
+| |       Feature 3
+| |
+* | commit c78853cb361a6809e707c40a399b6393780df621
+|/  Author: Mongare Shem <mongareshem1@gmail.com>
+|   Date:   Sat Apr 4 12:08:45 2026 +0300
+|
+|       Feature 4
+|
+*   commit 2229b14e7cd612949277c595bc1f527fef517f84
+|\  Merge: 973f0ff 5f13378
+| | Author: Shemuzz <mongareshem1@gmail.com>
+| | Date:   Fri Apr 3 14:00:35 2026 +0300
+| |
+| |     Merge pull request #3 from Shemuzz/feature2
+| |
+:
